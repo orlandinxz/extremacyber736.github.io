@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cibersegurança - Teste de Conhecimento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        header {
+            background: #16a085;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header img {
+            width: 120px;
+            margin-top: 1rem;
+        }
+
+        nav {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 1rem;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #1abc9c;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .container h2 {
+            color: #1abc9c;
+        }
+
+        footer {
+            background-color: #16a085;
+            color: white;
+            text-align: center;
+            padding: 0.5rem 0; /* Reduzi o padding para diminuir a altura */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .highlight {
+            color: #1abc9c;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            background: #34495e;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-info h3 {
+            color: #1abc9c;
+        }
+
+        .contact-info p {
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+
+        .contact-info a {
+            color: #1abc9c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cibersegurança - Teste de Conhecimento</h1>
+        <img src="https://via.placeholder.com/150?text=Ciberseguranca" alt="Logo Cibersegurança">
+        <p>Avalie seus conhecimentos em segurança digital</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#teste">Teste de Conhecimento</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="container" id="inicio">
+        <section>
+            <h2>Entenda a Importância da Cibersegurança</h2>
+            <p>Proteger suas informações online é mais importante do que nunca. Responda ao teste para avaliar o seu conhecimento sobre cibersegurança!</p>
+        </section>
+    </div>
+
+    <div class="container" id="teste">
+        <section>
+            <h2>Teste de Conhecimento</h2>
+
+            <!-- Perguntas sem soluções -->
+            <div class="question-card">
+                <h3>1. O que é Phishing?</h3>
+                <textarea id="phishing-answer" rows="4" placeholder="Digite sua resposta..."></textarea>
+                <button onclick="submitAnswer('phishing-answer', 'phishing-feedback', 'phishing-solution')">Enviar Resposta</button>
+                <div id="phishing-feedback" class="feedback"></div>
+                <div id="phishing-solution" class="feedback" style="display: none;">
+                    <h3>Solução:</h3>
+                    <p>Phishing é um tipo de golpe em que os atacantes se fazem passar por fontes confiáveis para obter informações pessoais.</p>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <h3>2. O que significa 'autenticação de dois fatores' e por que ela é importante?</h3>
+                <textarea id="two-factor-answer" rows="4" placeholder="Digite sua resposta..."></textarea>
+                <button onclick="submitAnswer('two-factor-answer', 'two-factor-feedback', 'two-factor-solution')">Enviar Resposta</button>
+                <div id="two-factor-feedback" class="feedback"></div>
+                <div id="two-factor-solution" class="feedback" style="display: none;">
+                    <h3>Solução:</h3>
+                    <p>A autenticação de dois fatores (2FA) é uma camada adicional de segurança que exige duas formas de verificação antes de permitir o acesso a contas e serviços.</p>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <h3>3. Como você pode se proteger de um ataque de 'Ransomware'?</h3>
+                <textarea id="ransomware-answer" rows="4" placeholder="Digite sua resposta..."></textarea>
+                <button onclick="submitAnswer('ransomware-answer', 'ransomware-feedback', 'ransomware-solution')">Enviar Resposta</button>
+                <div id="ransomware-feedback" class="feedback"></div>
+                <div id="ransomware-solution" class="feedback" style="display: none;">
+                    <h3>Solução:</h3>
+                    <p>Manter backups regulares e não abrir arquivos suspeitos são formas eficazes de proteção contra ransomware.</p>
+                </div>
+            </div>
+
+            <!-- Mais Perguntas com soluções -->
+            <div class="question-card">
+                <h3>4. O que é um ataque DDoS (Distributed Denial of Service)?</h3>
+                <textarea id="ddos-answer" rows="4" placeholder="Digite sua resposta..."></textarea>
+                <button onclick="submitAnswer('ddos-answer', 'ddos-feedback', 'ddos-solution')">Enviar Resposta</button>
+                <div id="ddos-feedback" class="feedback"></div>
+                <div id="ddos-solution" class="feedback" style="display: none;">
+                    <h3>Solução:</h3>
+                    <p>Um ataque DDoS visa tornar um site ou serviço indisponível ao sobrecarregar seus servidores com tráfego excessivo.</p>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <h3>5. O que são cookies e como eles afetam a privacidade online?</h3>
+                <textarea id="cookies-answer" rows="4" placeholder="Digite sua resposta..."></textarea>
+                <button onclick="submitAnswer('cookies-answer', 'cookies-feedback', 'cookies-solution')">Enviar Resposta</button>
+                <div id="cookies-feedback" class="feedback"></div>
+                <div id="cookies-solution" class="feedback" style="display: none;">
+                    <h3>Solução:</h3>
+                    <p>Cookies são pequenos arquivos armazenados no seu dispositivo para lembrar preferências e melhorar a experiência do usuário, mas podem comprometer a privacidade se usados de forma inadequada.</p>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <h3>6. O que é um firewall e por que ele é importante?</h3>
+                <textarea id="firewall-answer" rows="4" placeholder="Digite sua resposta..."></textarea>
+                <button onclick="submitAnswer('firewall-answer', 'firewall-feedback', 'firewall-solution')">Enviar Resposta</button>
+                <div id="firewall-feedback" class="feedback"></div>
+                <div id="firewall-solution" class="feedback" style="display: none;">
+                    <h3>Solução:</h3>
+                    <p>Firewalls são sistemas que monitoram e controlam o tráfego de rede, protegendo contra acessos não autorizados.</p>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <h3>7. O que é uma VPN e como ela melhora a segurança?</h3>
+                <textarea id="vpn-answer" rows="4" placeholder="Digite sua resposta..."></textarea>
+                <button onclick="submitAnswer('vpn-answer', 'vpn-feedback', 'vpn-solution')">Enviar Resposta</button>
+                <div id="vpn-feedback" class="feedback"></div>
+                <div id="vpn-solution" class="feedback" style="display: none;">
+                    <h3>Solução:</h3>
+                    <p>Uma VPN (Rede Privada Virtual) criptografa a conexão da internet e protege a privacidade do usuário ao esconder seu endereço IP.</p>
+                </div>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- Informações de Contato -->
+    <div class="contact-info" id="contato">
+        <h3>Informações de Contato</h3>
+        <p><strong>Email:</strong> <a href="mailto:orlandomacedo736@gmail.com">orlandomacedo736@gmail.com</a></p>
+        <p><strong>Disque Denúncia:</strong> 181</p>
+        <p><strong>Endereço:</strong> Rua da Segurança, 123, São Paulo, SP</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Cibersegurança Teste de Conhecimento. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function submitAnswer(answerId, feedbackId, solutionId) {
+            const answer = document.getElementById(answerId).value.toLowerCase();
+            const feedback = document.getElementById(feedbackId);
+            const solution = document.getElementById(solutionId);
+
+            let feedbackText = '';
+            if (answer.includes('senha') || answer.includes('email') || answer.includes('site')) {
+                feedbackText = 'Bom conhecimento! Continue aprendendo!';
+                feedback.className = 'feedback good';
+            } else if (answer.includes('duas') || answer.includes('fatores')) {
+                feedbackText = 'Razoável, você está indo bem! Fique atento!';
+                feedback.className = 'feedback ok';
+            } else {
+                feedbackText = 'Resposta insuficiente. Estude mais sobre cibersegurança!';
+                feedback.className = 'feedback poor';
+            }
+
+            feedback.innerHTML = feedbackText;
+            solution.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
